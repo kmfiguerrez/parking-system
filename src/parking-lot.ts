@@ -3,7 +3,6 @@ import { ParkingFee, ParkingSpotSize } from "./type";
 import { Vehicle } from "./vehicle";
 
 export class ParkingLot {
-  numEntryPoints: number;
   parkingSpots: ParkingSpot[];
   parkingFees: ParkingFee;
 
@@ -12,7 +11,11 @@ export class ParkingLot {
     this.parkingSpots = Array.from({ length: totalParkingSpots }, (_, i) => this.#createParkingSpot(i + 1));
     this.parkingFees = parkingFees;
 
-    if (numEntryPoints !== 3) {
+  }
+
+  // Setter.
+  set numEntryPoints(num: number) {
+    if (num !== 3) {
       throw new Error("Number of entry points must be equal to 3")
     }
   }

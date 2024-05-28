@@ -19,7 +19,7 @@ const parkingFees: ParkingFee = {
 
 
 try {
-  const MallParkingLot = new ParkingLot(5, 5, parkingFees)
+  const MallParkingLot = new ParkingLot(3, 5, parkingFees)
 
   const parkingSpot = MallParkingLot.parkVehicle(v5)
   const parkingFee = MallParkingLot.removeVehicle(parkingSpot)
