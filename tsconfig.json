@@ -1,0 +1,12 @@
+{
+  "compilerOptions": {
+    "target": "ES2015",            // Adjust based on browser compatibility
+    "module": "commonjs",       // CommonJS modules for Node.js
+    "outDir": "dist",            // Optional: Output directory for compiled JavaScript (can be omitted)
+    "esModuleInterop": true,    // Enables interoperability with ES modules
+    "allowJs": true,            // Allow compilation of existing JavaScript files
+    "strict": true,             // Enable strict mode for type safety
+    "sourceMap": true           // Generate source maps for debugging
+  },
+  "include": ["src/**/*.ts"]  // Include files from the "src" directory for compilation (adjust path if needed)
+}
