@@ -11,6 +11,10 @@ export class ParkingLot {
     this.numEntryPoints = numEntryPoints;
     this.parkingSpots = Array.from({ length: totalParkingSpots }, (_, i) => this.#createParkingSpot(i + 1));
     this.parkingFees = parkingFees;
+
+    if (numEntryPoints !== 3) {
+      throw new Error("Number of entry points must be equal to 3")
+    }
   }
 
 

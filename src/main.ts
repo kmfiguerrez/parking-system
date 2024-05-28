@@ -1,5 +1,4 @@
 import { ParkingLot } from "./parking-lot"
-import { ParkingSpot } from "./parking-spot"
 import { ParkingFee, VehicleType } from "./type"
 import { Vehicle } from "./vehicle"
 
@@ -18,9 +17,10 @@ const parkingFees: ParkingFee = {
   full_day: 5000
 }
 
-const MallParkingLot = new ParkingLot(3, 5, parkingFees)
 
 try {
+  const MallParkingLot = new ParkingLot(5, 5, parkingFees)
+
   const parkingSpot = MallParkingLot.parkVehicle(v5)
   const parkingFee = MallParkingLot.removeVehicle(parkingSpot)
   console.log(parkingFee)
