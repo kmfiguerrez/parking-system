@@ -38,7 +38,7 @@ export class ParkingLot {
 
     if (!availableSpot) throw new Error('No available parking spots or size appropriate for the vehicle');
 
-    // If vehicle leaved and comes back within one hour.
+    // If a vehicle leaves and comes back within one hour.
     if (vehicle.exitTime) {
       const elapsedTime: number = (Date.now() - vehicle.exitTime.getTime()) / 3600000
       if (elapsedTime < 1) vehicle.removedFlatRate = true
